@@ -1,0 +1,29 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Cidade {
+  - sigla: String
+  - nome: String
+  - estado: Estado
+}
+class DefautEntity {
+  - dataInclusao: LocalDateTime
+  - id: Long
+  - dataAlteracao: LocalDateTime
+}
+class Estado {
+  - sigla: String
+  - nome: String
+}
+class Pizza {
+  - sabor: String
+  - preco: Float
+}
+
+Cidade        -[#000082,plain]-^  DefautEntity 
+Estado        -[#000082,plain]-^  DefautEntity 
+Pizza         -[#000082,plain]-^  DefautEntity 
+@enduml
